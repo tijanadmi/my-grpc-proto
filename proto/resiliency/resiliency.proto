@@ -35,3 +35,19 @@ service ResiliencyService {
   rpc BiDirectionalResiliency(stream ResiliencyRequest)
   returns (stream ResiliencyResponse) {}
 }
+
+service ResiliencyWithMetadataService {
+  // This comment will be generated as OpenAPI summary
+  // for UnaryResiliencyWithMetadata 
+  rpc UnaryResiliencyWithMetadata(ResiliencyRequest)
+  returns (ResiliencyResponse) {}
+
+  rpc ServerStreamingResiliencyWithMetadata(ResiliencyRequest)
+  returns (stream ResiliencyResponse) {}
+
+  rpc ClientStreamingResiliencyWithMetadata(stream ResiliencyRequest)
+  returns (ResiliencyResponse) {}
+
+  rpc BiDirectionalResiliencyWithMetadata(stream ResiliencyRequest)
+  returns (stream ResiliencyResponse) {}
+}
